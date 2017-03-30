@@ -1,5 +1,10 @@
 {
     "compilerOptions": {
-        "target": "es6"
-    }
+        "target": "es5",
+        "lib": ["es6"],
+        "outFile": "dist/index.js",
+        "module": "system"
+    }, "files":   [
+        "src/index.ts"
+    ]
 }
