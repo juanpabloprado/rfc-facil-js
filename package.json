@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "$(yarn bin)/tsc",
+    "build": "$(yarn bin)/tsc --module system --outFile dist/index.js",
     "test": "$(yarn bin)/mocha -r ts-node/register src/*.test.ts"
   },
   "devDependencies": {
