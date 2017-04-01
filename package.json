@@ -1,20 +1,21 @@
 {
-  "name": "rfc-facil-js",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "build": "$(yarn bin)/tsc --module system --outFile dist/index.js",
-    "test": "$(yarn bin)/mocha -r ts-node/register src/*.test.ts"
-  },
-  "devDependencies": {
-    "@types/chai": "^3.4.35",
-    "@types/mocha": "^2.2.40",
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0",
-    "ts-node": "^3.0.2",
-    "typescript": "^2.2.1",
-    "written-number": "^0.5.0"
-  },
-  "dependencies": {}
+    "name": "rfc-facil-js",
+    "version": "1.0.0",
+    "main": "lib/index",
+    "typings": "lib/index",
+    "license": "MIT",
+    "scripts": {
+        "build": "$(yarn bin)/tsc --module system --declaration --outFile lib/index.js",
+        "test": "$(yarn bin)/mocha -r ts-node/register src/*.test.ts"
+    },
+    "devDependencies": {
+        "@types/chai": "^3.4.35",
+        "@types/mocha": "^2.2.40",
+        "chai": "^3.5.0",
+        "mocha": "^3.2.0",
+        "ts-node": "^3.0.2",
+        "typescript": "^2.2.1",
+        "written-number": "^0.5.0"
+    },
+    "dependencies": {}
 }

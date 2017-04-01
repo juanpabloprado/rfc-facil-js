@@ -55,12 +55,14 @@ export default function calculate(fullName: string): string {
 }
 
 // remove accents without removing the Ñ (u0303)
+// and remove special characters: .'-,
 function normalize(input: string): string {
   return input.toUpperCase()
     .normalize('NFD')
     .replace(/[\u0300-\u0302]/g, "")
     .replace(/[\u0304-\u036f]/g, "")
-    .replace(/N\u0303/g, "Ñ");
+    .replace(/N\u0303/g, "Ñ")
+    .replace(/[-\.',]/g, ''); // remove .'-,
 }
 
 function sumPairsOfDigits(input: string): number {
